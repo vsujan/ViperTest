@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ViperTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1n1-xq-miU">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFl-IY-Fai">
+                                <rect key="frame" x="166.5" y="485" width="81" height="30"/>
+                                <state key="normal" title="Open Detail"/>
+                                <connections>
+                                    <action selector="tappedDetailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hj0-5l-fyw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1n1-xq-miU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Adi-KX-HiG"/>
+                            <constraint firstItem="1n1-xq-miU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TpR-bI-P3q"/>
+                            <constraint firstItem="rFl-IY-Fai" firstAttribute="centerX" secondItem="1n1-xq-miU" secondAttribute="centerX" id="ayd-Sh-vy7"/>
+                            <constraint firstItem="rFl-IY-Fai" firstAttribute="top" secondItem="1n1-xq-miU" secondAttribute="bottom" constant="26.5" id="oCD-2P-QHE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbl" destination="1n1-xq-miU" id="1Ym-Yu-bn7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kfZ-S1-bvC">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="285-9d-ovK" customClass="DetailViewController" customModule="ViperTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kEO-qc-L6n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-e5-dfn">
+                                <rect key="frame" x="12" y="56" width="390" height="740"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oes-yE-Pik">
+                                <rect key="frame" x="183" y="808" width="48" height="30"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedCloseBtn:" destination="285-9d-ovK" eventType="touchUpInside" id="vBr-0H-XQf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17855110376195221" green="0.36128671459583417" blue="0.012342182182943676" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fSF-e5-dfn" firstAttribute="leading" secondItem="IND-qo-hmz" secondAttribute="leading" constant="12" id="93w-On-LHh"/>
+                            <constraint firstItem="IND-qo-hmz" firstAttribute="trailing" secondItem="fSF-e5-dfn" secondAttribute="trailing" constant="12" id="Vyw-mj-2sv"/>
+                            <constraint firstItem="oes-yE-Pik" firstAttribute="centerX" secondItem="kEO-qc-L6n" secondAttribute="centerX" id="WeB-5B-c5c"/>
+                            <constraint firstItem="oes-yE-Pik" firstAttribute="top" secondItem="fSF-e5-dfn" secondAttribute="bottom" constant="12" id="Y3M-kL-IHP"/>
+                            <constraint firstItem="IND-qo-hmz" firstAttribute="bottom" secondItem="oes-yE-Pik" secondAttribute="bottom" constant="24" id="oJ8-WO-bUr"/>
+                            <constraint firstItem="fSF-e5-dfn" firstAttribute="top" secondItem="IND-qo-hmz" secondAttribute="top" constant="12" id="siy-lj-eDm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IND-qo-hmz"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="fSF-e5-dfn" id="Xe9-6n-J9a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7v-yV-Xs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="21"/>
+        </scene>
+    </scenes>
+</document>
